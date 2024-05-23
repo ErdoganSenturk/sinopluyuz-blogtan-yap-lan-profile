@@ -1,0 +1,18 @@
+{% extends 'sinoplu/base.html' %}
+
+
+{% block container %}
+    <form action="" method="get">  
+        {% csrf_token %}
+        {{filter.form.as_p}} 
+    <button type="submit"> Ara </button>
+    </form>
+    <ul>
+        {% for sinoplu in filter.qs %}
+         <li>
+            <h2>{{ sinoplu.first_name }} - {{ sinoplu.last_name }} -{{ sinoplu.sehir}} -{{ sinoplu.kategori }}</h2>
+         </li>
+        {% endfor %} 
+    </ul>
+    
+{% endblock container %}

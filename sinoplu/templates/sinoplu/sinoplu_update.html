@@ -1,0 +1,10 @@
+{% extends 'sinoplu/base.html' %}
+
+{% block container %}
+    <h2>Update sinoplu</h2>
+    <form action="" method="POST">
+        {% csrf_token %}                   
+        {{form.as_p}}						   
+        <input type="submit" value="update">
+    </form>
+{% endblock container %}

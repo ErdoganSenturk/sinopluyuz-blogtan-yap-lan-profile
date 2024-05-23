@@ -1,0 +1,9 @@
+{% extends 'sinoplu/base.html' %}{% load static %}
+
+{% block container %}
+    {{sinoplu.first_name}} {{sinoplu.last_name}}
+    <br>
+    <a href="{% url 'update' sinoplu.id %}"><button>Update</button></a>
+    <a href="{% url 'delete' sinoplu.id %}"><button>Delete</button></a>
+    <span><i class="far fa-heart ml-2"><img src="{{sinoplu.image1}}"></i></span>
+{% endblock container %}
